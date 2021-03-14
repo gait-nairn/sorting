@@ -92,17 +92,17 @@ def _merged(xs, ys, cmp=cmp_standard):
     i = 0
     j = 0
     while i < len(x) and j < len(y):
-            if cmp(x[i], y[j]) == -1:
-                ls.append(x[i])
-                i += 1
-            elif cmp(x[i], y[j]) == 0:
-                ls.append(x[i])
-                ls.append(y[j])
-                i += 1
-                j += 1
-            elif cmp(x[i], y[j]) == 1:
-                ls.append(y[j])
-                j += 1
+        if cmp(x[i], y[j]) == -1:
+            ls.append(x[i])
+            i += 1
+        elif cmp(x[i], y[j]) == 0:
+            ls.append(x[i])
+            ls.append(y[j])
+            i += 1
+            j += 1
+        elif cmp(x[i], y[j]) == 1:
+            ls.append(y[j])
+            j += 1
 
     while i < len(x):
         ls.append(x[i])
